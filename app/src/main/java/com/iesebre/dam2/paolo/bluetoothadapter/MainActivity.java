@@ -79,11 +79,17 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.menu_discover:
+            case R.id.menu_discoverable:
                 Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
                 discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
                 startActivity(discoverableIntent);
                 return true;
+            case R.id.menu_discover:
+                // If we're already discovering, stop it
+                if (mBluetoothAdapter.isDiscovering()) {
+                    mBluetoothAdapter.cancelDiscovery();
+                }
+                mBluetoothAdapter.startDiscovery();
             case R.id.menu_pairedDevices:
                 Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
                 // If there are paired devices

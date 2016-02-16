@@ -2,4 +2,5 @@
     <string name="app_name">BluetoothAdapter</string>
     <string name="discover">Discover</string>
     <string name="menu_pairedDevices">pairedDevices</string>
+    <string name="menu_discoverable">Discoveriable</string>
 </resources>
