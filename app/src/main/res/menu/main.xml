@@ -3,4 +3,8 @@
     <item
         android:id="@+id/menu_discover"
         android:title="@string/discover" />
+
+    <item
+        android:id="@+id/menu_pairedDevices"
+        android:title="@string/menu_pairedDevices"/>
 </menu>

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BluetoothAdapter</string>
     <string name="discover">Discover</string>
+    <string name="menu_pairedDevices">pairedDevices</string>
 </resources>
